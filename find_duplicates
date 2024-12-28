@@ -1,0 +1,17 @@
+function duplicates(arr) {
+    let seen = [];
+    let res = [];
+    
+    for (let i = 0; i < arr.length; i++) {
+        if (!seen.includes(arr[i])) {
+            seen.push(arr[i]);
+        } else { // If already seen
+            // Check if it's already in res
+            if (!res.includes(arr[i])) {
+                res.push(arr[i]);
+            }
+        }
+    }
+    
+    return res;
+}
